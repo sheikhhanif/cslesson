@@ -5,3 +5,4 @@ pandas
 Flask-SQLAlchemy
 flask-bcrypt
 flask-login
+pysqlite3 
