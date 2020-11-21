@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Page Content -->
+<div class="container">
+
+  <div class="row text-center text-lg-left">
+
+    <div class="col-lg-3 col-md-4 col-6" style="text-align: center;">
+            <img class="img-fluid img-thumbnail" style="border-radius: 50%; margin: 5%; width: 80%;" src="/static/images/My CS.png" alt="My CS">
+              <a href="https://www.youtube.com/c/mycs1?sub_confirmation=1" class="btn btn-outline-success"> Subscribe </a>
+              <a href="{{url_for('filter', fil='My CS') }}" class="btn btn-outline-info"> See Courses</a>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-6" style="text-align: center;">
+            <img class="img-fluid img-thumbnail" style="border-radius: 50%; margin: 5%; width: 80%;" src="/static/images/gl.png" alt="Geek's Lesson">
+              <a href="https://www.youtube.com/c/geekslesson?sub_confirmation=1" class="btn btn-outline-success"> Subscribe </a>
+              <a href="{{url_for('filter', fil='Geeks Lesson') }}" class="btn btn-outline-info"> See Courses</a>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-6" style="text-align: center;">
+            <img class="img-fluid img-thumbnail" style="border-radius: 50%; margin: 5%; width: 80%;" src="/static/images/al.png" alt="Academic Lesson">
+              <a href="https://www.youtube.com/channel/UCwM4EI8mqvsSUR7Ou1D0qrA?sub_confirmation=1" class="btn btn-outline-success">Subscribe</a>
+              <a href="{{url_for('filter', fil='Academic Lesson') }}" class="btn btn-outline-info">See Courses</a>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-6" style="text-align: center;">
+      <img class="img-fluid img-thumbnail" style="border-radius: 50%; margin: 5%; width: 80%;" src="/static/images/gt.png" alt="CS Course">
+        <a href="https://www.youtube.com/channel/UClfn4HKvodl8v8-1hhroI5g?sub_confirmation=1" class="btn btn-outline-success">Subscribe</a>
+        <a href="{{url_for('filter', fil='all') }}" class="btn btn-outline-info">See Courses</a>
+    </div>
+    
+</div>
+
+  <h3 class="font-weight-light text-center text-lg-left mt-4 mb-0"> Featured Courses </h3>
+  <hr class="mt-2 mb-5">
+  <div class="row text-center text-lg-left">
+    {% for video in videos %}
+            {% if video.tag == "best" %}
+          <div class="col-lg-3 col-md-4 col-6">
+            <a href="{{ url_for('video_post', title=video.title)}}" class="d-block mb-4 h-100"> 
+                  <img class="img-fluid img-thumbnail" src= "https://i.ytimg.com/vi/{{ video.vid }}/hqdefault.jpg" alt="">
+                  {{ video.title }}</a>
+          </div>
+            {% endif %}
+    {% endfor %}
+    </div>
+    <h2 style="align-items: center; text-align: center;"><a href="{{url_for('filter', fil='all') }}" class="btn btn-outline-info">Explore Other Courses</a></h2>
+
+    
+    
+</div>
+
+
+{% endblock content %}

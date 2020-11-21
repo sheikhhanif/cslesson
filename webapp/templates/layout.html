@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+    {% if title %}
+        <title>CS Lesson - {{ title }}</title>
+    {% else %}
+        <title>Computer Science Lesson</title>
+    {% endif %}
+</head>
+<body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-info fixed-top">
+        <div class="container"> 
+         <a class="navbar-brand mr-4" href="/"> <b>CS Lesson</b>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="{{url_for('filter', fil='all') }}"> All Courses</a>
+                <a class="nav-item nav-link" href="{{url_for('partners') }}"> Our Partners </a>
+                <a class="nav-item nav-link" href="{{url_for('contact') }}"> Contact Us</a>
+            </div>
+            
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main role="main" class="container">
+      <div class="jumbotron bg-info" bg-success style="text-align: center; color: aliceblue;">
+        {% if title_name %}
+        <h3>{{ title_name }}</h3>
+        {% else %}
+            <h3>Computer Science Lesson</h3>
+        {% endif %}      
+    </div>
+        
+          {% block content %}{% endblock %}
+
+    </main>
+  </br>
+    <hr class="mt-2 mb-5">
+
+ <!-- Footer -->
+ 
+
+<footer class="footer">
+  <div class="container">
+    <div class="frow">
+      <div class="fcolumn">
+        <h4>About Us</h4>
+        <p>We provide contents related to computer science with the aim of
+          easing the access of educational materials to the mass people. </p>
+          <p><b>Support us: </b><a href="https://paypal.me/cslesson">PayPal</a></p>
+      </div>
+      <div class="fcolumn" id="sc">
+        <h4>Contact</h4>
+        <p><a href="https://www.facebook.com/groups/cslesson" class="fa fa-facebook"></a> <a
+            href="https://www.facebook.com/groups/cslesson/"> Facebook Group </a></p>
+        <p><a href="https://www.facebook.com/cslesson" class="fa fa-facebook"></a> <a
+            href="https://www.facebook.com/cslesson"> Facebook Page </a></p>
+            <p><a href="mailto:cslesson.org@gmail.com" class="fa fa-envelope"></a> <a
+              href="mailto:cslesson.org@gmail.com"> Email </a></p>
+      </div>
+
+      <div class="fcolumn" id="sc">
+        <h4>Partners</h4>
+        <p><a href="https://www.youtube.com/mycs1" class="fa fa-youtube"></a> <a href="https://www.youtube.com/mycs1">
+            My CS </a></p>
+        <p><a href="https://www.youtube.com/GeeksLesson" class="fa fa-youtube"></a> <a
+            href="https://www.youtube.com/GeeksLesson"> Geek's Lesson </a></p>
+        <p><a href="https://www.youtube.com/channel/UClfn4HKvodl8v8-1hhroI5g" class="fa fa-youtube"></a> <a
+            href="https://www.youtube.com/channel/UClfn4HKvodl8v8-1hhroI5g"> Geeks Talk </a></p>
+      </div>
+    </div>
+  </div>
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .fcolumn {
+      float: left;
+      width: 33.33%;
+      padding: 1%;
+    }
+
+    .fcolumn h4 {
+      margin-top: 3px;
+      text-align: center;
+    }
+
+    .fcolumn p {
+      text-align: center;
+    }
+    footer {
+      color: rgb(57, 107, 214);
+    }
+
+    #sc a {
+      text-align: left;
+    }
+
+    /* Clear floats after the columns */
+    .frow:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .fcolumn {
+        width: 100%;
+      }
+    }
+
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    
+  </style>
+</footer>
+
+
+<!-- Footer -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

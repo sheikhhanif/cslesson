@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Page Content -->
+<div class="container">
+
+  <h3 class="font-weight-light text-center text-lg-left mt-4 mb-0"> Recent Courses </h3>
+  <hr class="mt-2 mb-5">
+  <div class="row text-center text-lg-left">
+    {% for video in videos %}
+    {% if video.tag=='new' %}
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="{{ url_for('video_post', title=video.title)}}" class="d-block mb-4 h-100"> 
+            <img class="img-fluid img-thumbnail" src= "https://i.ytimg.com/vi/{{ video.vid }}/hqdefault.jpg" alt="">
+            {{ video.title }}</a>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+    
+  <h3 class="font-weight-light text-center text-lg-left mt-4 mb-0"> Python Programming </h3>
+  <hr class="mt-2 mb-5">
+  <div class="row text-center text-lg-left">
+    {% for video in videos[:51] %}
+      {% if video.category == 'Python' %}
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="{{ url_for('video_post', title=video.title)}}" class="d-block mb-4 h-100"> 
+            <img class="img-fluid img-thumbnail" src= "https://i.ytimg.com/vi/{{ video.vid }}/hqdefault.jpg" alt="">
+            {{ video.title }}</a>
+    </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+
+  <h3 class="font-weight-light text-center text-lg-left mt-4 mb-0"> Data Science </h3>
+  <hr class="mt-2 mb-5">
+  <div class="row text-center text-lg-left">
+    {% for video in videos[:100] %}
+      {% if video.category == 'Data Science' %}
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="{{ url_for('video_post', title=video.title)}}" class="d-block mb-4 h-100"> 
+            <img class="img-fluid img-thumbnail" src= "https://i.ytimg.com/vi/{{ video.vid }}/hqdefault.jpg" alt="">
+            {{ video.title }}</a>
+    </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+   
+  <h2 style="align-items: center; text-align: center;"><a href="{{url_for('filter', fil='all') }}" class="btn btn-outline-info">Explore Other Courses</a></h2>
+
+</div>
+
+
+{% endblock content %}
+

@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Page Content -->
+<div class="container">
+
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle bg-info " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Categories              </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="{{url_for('filter', fil='Data Science') }}">Data Science</a>
+      <a class="dropdown-item" href="{{url_for('filter', fil='Python') }}"> Python Programming</a>
+      <a class="dropdown-item" href="{{url_for('filter', fil='Security') }}"> Cyber Security</a>
+      <a class="dropdown-item" href="{{url_for('filter', fil='Machine Learning') }}">  Machine Learning </a>
+      <a class="dropdown-item" href="{{url_for('filter', fil='Statistics') }}"> Statistics</a>
+      <a class="dropdown-item" href="{{url_for('filter', fil='Algebra') }}"> Linear Algebra</a>
+      <a class="dropdown-item" href="{{url_for('filter', fil='Quantum') }}">  Quantum Physics</a>
+      <a class="dropdown-item" href="{{url_for('filter', fil='Database') }}">  Database</a>
+      <a class="dropdown-item" href="{{url_for('filter', fil='Deep Learning') }}">  Deep Learning</a>
+      <a class="dropdown-item" href="{{url_for('filter', fil='Networking') }}">  Networking </a>
+      <a class="dropdown-item" href="{{url_for('filter', fil='C++') }}">  C++ </a>
+    </div>
+  </div>
+
+  <hr class="mt-2 mb-5">
+
+  <div class="row text-center text-lg-left">
+  {% if  fil %}
+  {% for video in videos.items %}
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="{{ url_for('video_post', title=video.title)}}" class="d-block mb-4 h-100"> 
+            <img class="img-fluid img-thumbnail" src= "https://i.ytimg.com/vi/{{ video.vid }}/hqdefault.jpg" alt="">
+            {{ video.title }}</a>
+    </div>
+  {% endfor %}
+    <div> 
+      {% for page_num in videos.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+      {% if page_num %}
+        {% if videos.page == page_num %}
+          <a class="btn btn-info mb-4" href="{{ url_for('filter', fil='all') }}">{{ page_num }}</a>
+        {% else %}
+          <a class="btn btn-outline-info mb-4" href="{{ url_for('filter', fil='all', page=page_num) }}">{{ page_num }}</a>
+        {% endif %}
+      {% else %}
+        ...
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% else %}
+
+  {% for video in videos %}
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="{{ url_for('video_post', title=video.title)}}" class="d-block mb-4 h-100"> 
+              <img class="img-fluid img-thumbnail" src= "https://i.ytimg.com/vi/{{ video.vid }}/hqdefault.jpg" alt="">
+              {{ video.title }}</a>
+      </div>
+    {% endfor %}
+  {% endif%}
+
+</div>
+
+</div>
+{% endblock content %}
