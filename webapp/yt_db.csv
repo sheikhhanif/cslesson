@@ -1,0 +1,21 @@
+title,link,description,tag,thumbnail,id
+Physics,https://youtube.com/playlist?list=PLKp3X-578hN9G7-vPjRya5j0U4dJIhwFI,"Learn about Physics basics , modern physics and Mechanics",,static/images/physics.svg,1
+Chemistry,https://youtube.com/playlist?list=PLKp3X-578hN9jCm2MEGCg50RKxCFZjU5Y,"Learn about Computational chemistry,  physical chemistry and more",,static/images/chemistry.svg,2
+Mathematics for Machine Learning,https://youtube.com/playlist?list=PLKp3X-578hN_aIafLkjHmJjmDHLdjOtMU,"Learn about essential mathematics required for machine learning such as linear algebra, calculus and more",trending,static/images/math_ml.svg,3
+Data Structures and Algorithms,https://youtube.com/playlist?list=PLKp3X-578hN9pN0EhtmXG04uXFWHcWdKi,Learn about data structures and algorithms,trending,static/images/data_structure_algo.svg,4
+Business Analytics,https://youtube.com/playlist?list=PLKp3X-578hN9Qa1u6PBcpFJl1RE8PfOLt,Learn about business analytics,,static/images/business_analytics.svg,5
+Data Science,https://youtube.com/playlist?list=PLKp3X-578hN-8tnv-8HiBoxOOJPRdb3PS,Learn about data science from list of comprehensive courses,,static/images/data_science.svg,6
+Machine Learning,https://youtube.com/playlist?list=PLKp3X-578hN9Y0hHZHoi5y2FLUV6G3Vfm,Learn about machine learning from basics to the advanced level,,static/images/machine_learning.svg,7
+Programming,https://youtube.com/playlist?list=PLKp3X-578hN96LsslmfTDzIRgks16Ikmj,"Learn about c++, Java, Python and more",,static/images/programming.svg,8
+Linear Algebra,https://youtube.com/playlist?list=PLKp3X-578hN8s5htUiN-8yO38BR4eaPsb,Learn about linear algebra,trending,static/images/linear_algebra.svg,9
+Python Programming,https://youtube.com/playlist?list=PLKp3X-578hN-2PhIwG3a9gEQDE8gXYN9S,Learn about python programming provided by experts,,static/images/python_programming.svg,10
+Algebra,https://youtube.com/playlist?list=PLKp3X-578hN9Kav7MPIzPUpMBtESzTD3E,Learn about algebra,,static/images/algebra.svg,11
+Linux,https://youtube.com/playlist?list=PLKp3X-578hN99d7bj6EU-AnGyAE6Fdc6R,"Learn everything you need to know about linux, linux command line and more",recent,static/images/linux.svg,12
+CompTIA Certification,https://youtube.com/playlist?list=PLKp3X-578hN-tuoQ4vdlR_yUMt2SmAAQf,"List of comprehensive courses to prepare yourself for compTIA A+, network+ and security+ certifications",recent,static/images/comptia.svg,13
+Data Analysis,https://youtube.com/playlist?list=PLKp3X-578hN-a0Mc5jTgEzuySJGrUas8J,Learn the required skills to do effective data analysis,,static/images/data_analysis.svg,14
+Database,https://youtube.com/playlist?list=PLKp3X-578hN8rDMqB62T3pU0d2Y0UQWNS,"Learn about database, SQL and more in depth",,static/images/database.svg,15
+IT security,https://youtube.com/playlist?list=PLKp3X-578hN993JhuXKKpgqhT3QzngJ1L,Be the hero in cybersecurity by taking these comprehensive courses,recent,static/images/IT_security.svg,16
+Quantum Physics,https://youtube.com/playlist?list=PLKp3X-578hN94nz19SR20DMzxGVaejrV-,Learn everything you need to know about  quantum physics or quantum mechanics,,static/images/quantum_physics.svg,17
+Calculus,https://youtube.com/playlist?list=PLKp3X-578hN9MAQguyVNm9mRVel2bgHlM,Explore calculus in depth,,static/images/calculus.svg,18
+Statistics,https://youtube.com/playlist?list=PLKp3X-578hN8G0lo4bLQ1XJZF-xe19CdG,Statistics courses from top several experts,,static/images/statistics.svg,19
+Precalculus,https://youtube.com/playlist?list=PLKp3X-578hN80dAMs77TV2NiBs7bT8FYB,"Learn about precalculus, trigonometry and more",,static/images/precalculus.svg,20
